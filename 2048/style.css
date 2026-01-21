@@ -5,8 +5,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #faf8ef;
+    background: linear-gradient(270deg, #000, #333);
+    animation: backgroundAnimation 5s infinite alternate;
     font-family: 'Arial', sans-serif;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: #000; }
+    100% { background-color: #333; }
 }
 
 .grid-container {
@@ -41,4 +47,7 @@ body {
 .tile-256 { background-color: #edcc61; }
 .tile-512 { background-color: #edc850; }
 .tile-1024 { background-color: #edc53f; }
+.tile-2048 { background-color: #edc22e; }
+.tile-4096 { background-color: #ff4d4d; } 
+.tile-8192 { background-color: #ffcc00; } 
 .tile-2048 { background-color: #edc22e; }
