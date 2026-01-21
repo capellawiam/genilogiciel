@@ -1,29 +1,44 @@
 /* Style a 2048 game grid and tiles */
-@keyframes tileAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
 
-.tile {
-    transition: transform 0.2s ease;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(270deg, #000, #333);
+    animation: backgroundAnimation 5s infinite alternate;
+    font-family: 'Arial', sans-serif;
 }
-
-.tile:hover {
-    animation: tileAnimation 0.5s infinite;
-}
-
-.tile-4096 { background-color: #ff4d4d; }
-.tile-8192 { background-color: #ffcc00; }
-.tile-16384 { background-color: #00bfff; }
-.tile-32768 { background-color: #ff1493; }
-.tile-65536 { background-color: #32cd32; }
 
 @keyframes backgroundAnimation {
     0% { background-color: #000; }
-    50% { background-color: #1a1a1a; }
     100% { background-color: #333; }
 }
+
+.grid-container {
+    width: 400px;
+    height: 400px;
+    background-color: #bbada0;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.tile {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+}
+
+.tile-2 { background-color: #eee4da; color: #776e65; }
+.tile-4 { background-color: #ede0c8; color: #776e65; }
 .tile-8 { background-color: #f2b179; }
 .tile-16 { background-color: #f59563; }
 .tile-32 { background-color: #f67c5f; }
